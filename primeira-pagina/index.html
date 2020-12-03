@@ -5,27 +5,160 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <title>Landing page with two column layout</title>
 
   <style>
+    * {
+      margin: 0;
+    }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    /* MENU */
+    .menu {
+      font-family: 'Raleway', sans-serif;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3rem;
+    }
+    .logo {
+      width: 150px;
+    }
+    .option > ul {
+      display: flex;
+      list-style: none;
+      align-items: center;
+    }
+    .option > ul > li {
+      padding: 0 1.2rem;
+    }
+    .option > ul > li > a {
+      text-decoration: none;
+      color: hsl(238, 22%, 44%);
+      font-weight: 700;
+    }
+    /* CABEÇALHO */
+    .cabecalho {
+      display: flex;
+      padding: 3rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header__info {
+      /* display: flex;
+      justify-content: center;
+      flex-wrap: wrap; */
+      padding-right: 7rem;
+    }
+    .header__body > h1 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+    .header__body > p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.4rem;
+      margin: 1.3rem 0;
+    }
+    .header__input {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .header__input > input {
+      border-radius: 3px;
+      width: 16rem;
+      padding: 10px 15px;
+    }
+    #email__warning {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.8rem;
+    }
+    #btn__email {
+      font-family: 'Open Sans', sans-serif;
+      padding: 11px 50px;
+      border: none;
+      color: white;
+      background-color: hsl(224, 93%, 58%);
+      margin-left: 10px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    #btn__email:hover {
+      opacity: 0.8;
+    }
+    .header__img {
+      display: flex;
+      justify-content: flex-start;
+    }
+    .header__img > img {
+      width: 600px;
+    }
+    @media only screen and (max-width: 1000px) {
+      /* MENU */
+      .menu {
+        padding: 2rem;
+      }
+      .logo {
+        width: 100px;
+      }
+      /* CABEÇALHO */
+      .cabecalho {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+      }
+      .header__body > h1 {
+        text-align: center;
+        font-size: 1.4rem;
+        line-height: normal;
+      }
+      .header__body > p {
+        text-align: center;
+        font-size: 0.9rem;
+      }
+      .header__img > img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 22rem;
+      }
+      .header__info {
+        padding: 3rem;
+      }
+    }
   </style>
 </head>
 <body>
-
-  Features
-  Team
-  Sign In
-
-  All your files in one secure location, accessible anywhere.
-
-  Fylo stores your most important files in one secure location. 
-  Access them wherever you need, share and collaborate with friends, 
-  family, and co-workers.
-
-  Get Started
+  <nav class="menu">
+    <div>
+      <img class="logo" src="./images/logo.svg" alt="Logo da empresa">
+    </div>
+    <div class="option">
+      <ul>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Sign In</a></li>
+      </ul>
+    </div>
+  </nav>
+  <header class="cabecalho">
+    <div class="header__info">
+      <div class="header__body">
+        <h1>All your files in one secure <br> location, accessible anywhere.</h1>
+        <p>Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family, and co-workers.</p>
+      </div>
+      <div class="header__input">
+        <input type="email" placeholder="Enter your email...">
+        <button id="btn__email">Get Started</button>
+      </div>
+      <span id="email__warning"></span>
+    </div>
+    <div class="header__img">
+      <img src="./images/illustration-1.svg" alt="Ilustração 1">
+    </div>
+  </header>
 
   Stay productive, wherever you are
 
@@ -64,8 +197,36 @@
 
   <footer>
     <p class="attribution">
-      Coded by <a href="#">Nome do Aluno</a>.
+      Coded by <a style="font-weight: bold; text-decoration: none;" href="https://github.com/joaodiniz99" target="_blank">João Diniz</a>.
     </p>
   </footer>
-</body>
+  <script>
+    function ValidateEmail(mail, input) {
+      let resposta = document.getElementById("email__warning");
+      if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(mail)) {
+        input.style.border = '2px solid green';
+        resposta.style.color = "green";
+        resposta.innerHTML = 'Email sent';
+        return true;
+      }
+      input.style.border = '2px solid red';
+      resposta.style.color = "red";
+      resposta.innerHTML = 'Please check your email';
+      return false;
+    }
+
+    var campo = document.getElementsByClassName("header__input")[0].children[0];
+    var btn = document.getElementById("btn__email");
+    btn.addEventListener("click", e => {
+      const valor = campo.value;
+      if(valor != '') {
+        console.log(valor);
+        ValidateEmail(valor, campo);
+      } else {
+        alert("Preencha o campo!");
+      }
+    });
+    console.log(campo);
+  </script>
+  </body>
 </html>
