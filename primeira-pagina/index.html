@@ -1,229 +1,537 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-  <title>Landing page with two column layout</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/32f6c629d4.js" crossorigin="anonymous"></script>
+    <title>Landing page with two column layout</title>
 
-  <style>
-    * {
-      margin: 0;
-    }
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    /* MENU */
-    .menu {
-      font-family: 'Raleway', sans-serif;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 3rem;
-    }
-    .logo {
-      width: 150px;
-    }
-    .option > ul {
-      display: flex;
-      list-style: none;
-      align-items: center;
-    }
-    .option > ul > li {
-      padding: 0 1.2rem;
-    }
-    .option > ul > li > a {
-      text-decoration: none;
-      color: hsl(238, 22%, 44%);
-      font-weight: 700;
-    }
-    /* CABEÇALHO */
-    .cabecalho {
-      display: flex;
-      padding: 3rem;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .header__info {
-      padding-right: 7rem;
-    }
-    .header__body > h1 {
-      font-family: 'Raleway', sans-serif;
-      font-size: 3rem;
-      line-height: 4rem;
-    }
-    .header__body > p {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 1.4rem;
-      margin: 1.3rem 0;
-    }
-    .header__input {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .header__input > input {
-      border-radius: 3px;
-      width: 20rem;
-      padding: 10px 15px;
-    }
-    #email__warning {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 0.8rem;
-    }
-    #btn__email {
-      font-family: 'Open Sans', sans-serif;
-      padding: 11px 60px;
-      border: none;
-      color: white;
-      background-color: hsl(224, 93%, 58%);
-      margin-left: 10px;
-      cursor: pointer;
-      transition: opacity 0.2s;
-    }
-    #btn__email:hover {
-      opacity: 0.8;
-    }
-    .header__img {
-      display: flex;
-      justify-content: flex-start;
-    }
-    .header__img > img {
-      width: 600px;
-    }
-    @media only screen and (max-width: 1000px) {
+    <style>
+      * {
+        margin: 0;
+        scroll-behavior: smooth;
+      }
+      .attribution { font-size: 11px; text-align: center; }
+      .attribution a { color: hsl(228, 45%, 44%); }
       /* MENU */
       .menu {
-        padding: 2rem;
+        font-family: 'Raleway', sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem 4.5rem;
       }
       .logo {
-        width: 100px;
+        width: 150px;
+      }
+      .option > ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+      }
+      .option > ul > li {
+        padding: 0 1.2rem;
+      }
+      .option > ul > li > a {
+        text-decoration: none;
+        color: hsl(238, 22%, 44%);
+        font-weight: 700;
       }
       /* CABEÇALHO */
       .cabecalho {
-        flex-wrap: wrap-reverse;
-        justify-content: center;
-      }
-      .header__body > h1 {
-        text-align: center;
-        font-size: 1.4rem;
-        line-height: normal;
-      }
-      .header__body > p {
-        text-align: center;
-        font-size: 0.9rem;
-      }
-      .header__img > img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 22rem;
+        display: flex;
+        padding: 4.5rem;
+        justify-content: space-between;
+        align-items: center;
       }
       .header__info {
-        padding: 3rem;
+        padding-right: 7rem;
       }
-    }
-  </style>
-</head>
-<body>
-  <nav class="menu">
-    <div>
-      <img class="logo" src="./images/logo.svg" alt="Logo da empresa">
-    </div>
-    <div class="option">
-      <ul>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Team</a></li>
-        <li><a href="#">Sign In</a></li>
-      </ul>
-    </div>
-  </nav>
-  <header class="cabecalho">
-    <div class="header__info">
-      <div class="header__body">
-        <h1>All your files in one secure location, accessible anywhere.</h1>
-        <p>Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family, and co-workers.</p>
+      .title {
+        font-family: 'Raleway', sans-serif;
+        font-size: 2.5rem;
+        line-height: 4rem;
+      }
+      .text {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.2rem;
+        margin: 1.3rem 0;
+      }
+      .header__input {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .header__input > input {
+        border-radius: 3px;
+        width: 20rem;
+        padding: 10px 15px;
+        margin-right: 10px;
+      }
+      .email__warning {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 0.8rem;
+      }
+      .btn__email {
+        font-family: 'Open Sans', sans-serif;
+        padding: 11px 60px;
+        border: none;
+        color: white;
+        background-color: hsl(224, 93%, 58%);
+        cursor: pointer;
+        transition: opacity 0.2s;
+      }
+      .btn__email:hover {
+        opacity: 0.8;
+      }
+      .header__img {
+        display: flex;
+        justify-content: flex-start;
+      }
+      .header__img > img {
+        width: 600px;
+      }
+      /* SECÇÃO DE INFORMAÇÃO */
+      .section__imgg {
+        width: 100%;
+        margin: 10rem 0 0 0;
+      }
+      .section__info {
+        background-color: hsl(240, 75%, 98%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4.5rem;
+        margin-top: -5px;
+      }
+      .info__body {
+        padding-right: 7rem;
+      }
+      .anchor {
+        color: rgb(0, 174, 120);
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.3rem;
+        text-decoration: none;
+        padding-bottom: 0.2rem;
+        border-bottom: 2px solid rgb(0, 174, 120);
+        transition: opacity 200ms;
+      }
+      .anchor > span {
+        margin-right: 0.3rem;
+      }
+      .anchor > img {
+        width: 1.4rem;
+        margin-bottom: -5px;
+      }
+      .anchor:hover {
+        opacity: 0.7;
+      }
+      /* TESTEMUNHO */
+      .testimonial__info {
+        background-color: white;
+        margin-top: 3rem;
+        padding: 2rem;
+        width: 21rem;
+        box-shadow: 0px 1px 5px 5px rgba(206, 206, 206, 0.2);
+        font-family: 'Open Sans', sans-serif;
+        border-radius: 5px;
+      }
+      .testimonial__text {
+        line-height: 1.8rem;
+      }
+      .testimonial__author {
+        display: flex;
+        margin: 1rem 0 0 0;
+      }
+      .testimonial__logo {
+        width: 2.6rem;
+        border-radius: 55px;
+        margin: 0 0.5rem 0 0;
+      }
+      .divisor__div {
+        display: block;
+        width: 15rem;
+        margin: auto 0;
+      }
+      .testimonial__quote {
+        width: 1.3rem;
+        margin: 0 0 0.5rem 0;
+      }
+      .testimonial__name {
+        font-size: 1rem;
+        font-family: 'Raleway', sans-serif;
+      }
+      .testimonial__role {
+        font-size: 0.8rem;
+        font-family: 'Open Sans', sans-serif;
+      }
+      .section__img {
+        display: flex;
+        justify-content: flex-start;
+      }
+      .section__img > img {
+        width: 600px;
+      }
+      /* SECÇÃO DE ACESSO */
+      .section__access {
+        color: white;
+        background-color: hsl(238, 22%, 44%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4.5rem;
+      }
+      .section__access__info {
+        padding-right: 15rem;
+      }
+      .section__access__info > h1 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 2.4rem;
+      }
+      .section__access__info > p {
+        margin: 1rem 0 0 0;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.2rem;
+      }
+      .section__access__input {
+        width: 1200px;
+      }
+      .section__access__input > div > input {
+        border-radius: 3px;
+        border: none;
+        width: 25rem;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+      }
+      .section__access__input > div > input:focus {
+        outline: none;
+      }
+      .section__access__input > div > button {
+        padding: 15px 30px;
+      }
+      /* FOOTER */
+      footer {
+        display: block;
+        padding: 4.5rem;
+        background-color: hsl(243, 87%, 12%);
+        font-family: 'Raleway', sans-serif;
+        color: white;
+      }
+      .footer__logo {
+        margin-bottom: 20px;
+      }
+      .footer__info {
+        display: flex;
+        justify-content: space-between;
+      }
+      .footer__info__item {
+        list-style: none;
+      }
+      .footer__info__item > a {
+        color: white;
+        text-decoration: none;
+      }
+      .footer__info__contacts > p {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .footer__info__contacts > p > img {
+        margin-right: 20px;
+      }
+      .footer__info__item {
+        margin-bottom: 1rem;
+      }
+      .footer__info__item > a {
+        transition: color 200ms;
+      }
+      .footer__info__item:hover > a {
+        color: hsl(238, 22%, 44%);
+      }
+      .social__logo {
+        color: white;
+        text-decoration: none;
+        margin: 0 0 0 1rem;
+      }
+      .social__logo > i {
+        display: flex;
+        align-items: center;
+        border-radius: 25px;
+        border: 2px solid white;
+        padding: 0.4rem;
+        transition: color 200ms, border 200ms;
+      }
+      .social__logo:hover i {
+        color: hsl(238, 22%, 44%);
+        border: 2px solid hsl(238, 22%, 44%);
+      }
+      @media only screen and (max-width: 1000px) {
+        /* MENU */
+        .menu {
+          padding: 2rem;
+        }
+        .logo {
+          width: 100px;
+        }
+        .option > ul > li {
+          padding: 0 0.2rem;
+        }
+        .option > ul > li > a { 
+          font-size: 0.9rem;
+        }
+        /* CABEÇALHO */
+        .cabecalho {
+          flex-wrap: wrap-reverse;
+          justify-content: center;
+          padding: 2rem;
+        }
+        .title {
+          text-align: center;
+          font-size: 1.7rem;
+          line-height: 2.5rem;
+          margin: 3rem 0;
+        }
+        .text {
+          text-align: center;
+          font-size: 0.9rem;
+        }
+        .header__info {
+          padding: 0rem;
+        }
+        .header__img > img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 22rem;
+        }
+        .header__input > input {
+          width: 100%;
+          margin: 1rem 0;
+        }
+        .header__input > button {
+          width: 100%;
+        }
+        /* SECÇÃO DA ONDA */
+        .section__imgg {
+          margin-top: 3rem;
+        }
+        /* SECÇÃO DE INFORMAÇÃO */
+        .section__info {
+          flex-wrap: wrap-reverse;
+          justify-content: center;
+          padding: 3rem;
+        }
+        .section__img > img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 22rem;
+        }
+        .info__body {
+          padding-right: 0;
+        }
+        .info__body .title {
+          font-size: 1.1rem;
+        }
+        .info__body .text {
+          padding: 0 1rem;
+        }
+        .anchor {
+          margin: 0 4rem;
+        }
+        .testimonial__info {
+          width: 80%;
+          margin: 0 auto;
+          margin-top: 3rem;
+        }
+        /* SECÇÃO DO INPUT */
+        .section__access__info {
+          padding: 0;
+          justify-content: center;
+        }
+        .section__access__info > h1 {
+          text-align: center;
+          font-size: 1.2rem;
+        }
+        .section__access__info > h1 {
+          text-align: center;
+        }
+        .section__access__input {
+          margin: 0 auto;
+        }
+        .section__access__input > div {
+          width: 15rem;
+        }
+        .section__access__input > div > input {
+          width: 85%;
+        }
+        .section__access__input > div > button { 
+          width: 15rem;
+        }
+        .section__access {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        /* FOOTER */
+        .footer__info {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="menu">
+      <div>
+        <img class="logo" src="./images/logo.svg" alt="Logo da empresa">
       </div>
-      <div class="header__input">
-        <input type="email" placeholder="Enter your email...">
-        <button id="btn__email">Get Started</button>
+      <div class="option">
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Sign In</a></li>
+        </ul>
       </div>
-      <span id="email__warning"></span>
-    </div>
-    <div class="header__img">
-      <img src="./images/illustration-1.svg" alt="Ilustração 1">
-    </div>
-  </header>
+    </nav>
+    <header class="cabecalho">
+      <div class="header__info">
+        <div class="header__body">
+          <h1 class="title">All your files in one secure location, accessible anywhere.</h1>
+          <p class="text">Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family, and co-workers.</p>
+        </div>
+        <div class="header__input">
+          <input type="email" placeholder="Enter your email...">
+          <button class="btn__email">Get Started</button>
+        </div>
+        <span class="email__warning"></span>
+      </div>
+      <div class="header__img">
+        <img src="./images/illustration-1.svg" alt="Ilustração 1">
+      </div>
+    </header>
+    <img class="section__imgg" src="./images/bg-curve-desktop.svg" alt="Onda">
+    <section class="section__info">
+      <div class="info__body">
+        <h1 class="title">Stay productive, wherever you are</h1>
+        <p class="text">
+          Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.
+        </p>
+        <p class="text">
+          Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required!
+        </p>
+        <a class="anchor" href="#">
+          <span>See how Fylo works</span>
+          <img src="./images/icon-arrow.svg"/>
+        </a>
+        <div class="testimonial__info">
+          <img class="testimonial__quote" src="./images/icon-quotes.svg" alt="Icon texto">
+          <p class="testimonial__text">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+          <div class="testimonial__author">
+            <img src="./images/avatar-testimonial.jpg" alt="Testimonial Logo" class="testimonial__logo">
+            <div class="divisor__div">
+              <h4 class="testimonial__name">Kyle Burton</h4>
+              <p class="testimonial__role">Founder & CEO, Huddle</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section__img">
+        <img src="./images/illustration-2.svg" alt="Illustration 2">
+      </div>
+    </section>
+    <section class="section__access">
+      <div class="section__access__info">
+        <h1>Get early access today</h1>
+        <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+      </div>
+      <div class="section__access__input">
+        <div>
+          <input type="email" placeholder="email@example.com">
+          <button class="btn__email">Get Started For Free</button>
+        </div>
+        <span class="email__warning" style="color: white;"></span>
+      </div>
+    </section>
+    <footer>
+      <div>
+        <img class="footer__logo" src="./images/logo_white.svg" alt="Fylo Logo">
+      </div>
+      <div class="footer__info">
+        <div class="footer__info__contacts">
+          <p><img src="./images/icon-phone.svg"/>+1-543-123-4567</p>
+          <p><img src="./images/icon-email.svg"/>example@fylo.com</p>
+        </div>
+        <div>
+          <ul>
+            <li class="footer__info__item"><a href="#">About Us</a></li>
+            <li class="footer__info__item"><a href="#">Jobs</a></li>
+            <li class="footer__info__item"><a href="#">Press</a></li>
+            <li class="footer__info__item"><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li class="footer__info__item"><a href="#">Contact Us</a></li>
+            <li class="footer__info__item"><a href="#">Terms</a></li>
+            <li class="footer__info__item"><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+        <div style="display: flex;">
+          <a class="social__logo" href="#"><i style="padding: 0.4rem 0.6rem 0.4rem 0.6rem;" class="fab fa-facebook-f"></i></a>
+          <a class="social__logo" href="#"><i class="fab fa-twitter"></i></a>
+          <a class="social__logo" href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
 
-  Stay productive, wherever you are
-
-  Never let location be an issue when accessing your files. Fylo has you 
-  covered for all of your file storage needs.
-
-  Securely share files and folders with friends, family and colleagues for 
-  live collaboration. No email attachments required!
-
-  See how Fylo works
-
-  Fylo has improved our team productivity by an order of magnitude. Since 
-  making the switch our team has become a well-oiled collaboration machine.
-
-  Kyle Burton
-  Founder & CEO, Huddle
-
-  Get early access today
-
-  It only takes a minute to sign up and our free starter tier is extremely generous. 
-  If you have any questions, our support team would be happy to help you.
-
-  Get Started For Free
-
-  Phone: +1-543-123-4567
-  example@fylo.com
-
-  About Us
-  Jobs
-  Press
-  Blog
-
-  Contact Us
-  Terms
-  Privacy
-
-  <footer>
-    <p class="attribution">
-      Coded by <a style="font-weight: bold; text-decoration: none;" href="https://github.com/joaodiniz99" target="_blank">João Diniz</a>.
-    </p>
-  </footer>
-  <script>
-    function ValidateEmail(mail, input) {
-      let resposta = document.getElementById("email__warning");
-      if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(mail)) {
-        input.style.border = '2px solid green';
-        resposta.style.color = "green";
-        resposta.innerHTML = 'Email sent';
-        return true;
+    <!-- <footer>
+      <p class="attribution">
+        Coded by <a style="font-weight: bold; text-decoration: none;" href="https://github.com/joaodiniz99" target="_blank">João Diniz</a>.
+      </p>
+    </footer> -->
+    <script>
+      function ValidateEmail(mail, input, resposta, pos) {
+        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(mail)) {
+          input.style.border = '2px solid green';
+          if (pos !== 1) {
+            resposta.style.color = "green";
+          } else {
+            resposta.style.color = "white";
+          }
+          resposta.innerHTML = 'Email sent';
+          return true;
+        }
+        input.style.border = '2px solid red';
+        if (pos !== 1) {
+          resposta.style.color = "red";
+        } else {
+          resposta.style.color = "white";
+        }
+        resposta.innerHTML = 'Please check your email';
+        return false;
       }
-      input.style.border = '2px solid red';
-      resposta.style.color = "red";
-      resposta.innerHTML = 'Please check your email';
-      return false;
-    }
 
-    var campo = document.getElementsByClassName("header__input")[0].children[0];
-    var btn = document.getElementById("btn__email");
-    btn.addEventListener("click", e => {
-      const valor = campo.value;
-      if(valor != '') {
-        console.log(valor);
-        ValidateEmail(valor, campo);
-      } else {
-        alert("Preencha o campo!");
+      var btn = document.getElementsByClassName("btn__email");
+      // console.log(btn);
+
+      for (let i = 0; i < btn.length; i++) {
+        btn[i].addEventListener("click", e => {
+          const campo = e.target.parentNode.children[0]// input
+          const sibling = e.target.parentNode.nextElementSibling;// resposta
+          const valor = campo.value;// valor
+          if(valor != '') {
+            ValidateEmail(valor, campo, sibling, i);
+          } else {
+            alert("Preencha o campo!");
+          }
+        });
       }
-    });
-    console.log(campo);
-  </script>
+
+    </script>
   </body>
 </html>
