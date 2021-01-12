@@ -1,0 +1,67 @@
+#container-main {
+    background-image: url(./images/mapa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    width: 100%;
+    margin: 0;
+}
+
+.backgroundd {
+    height: 15rem; 
+    background-image: url(./images/pattern-bg.png);
+}
+
+.row {
+    border-radius: 20px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.roc {
+    border-radius: 0 15px 15px 0 !important;
+    background-color: black; 
+    color: white;
+    cursor: pointer;
+}
+
+input {
+    width: 30vw !important;
+}
+
+.roc:hover {
+    background-color: hsl(0, 0%, 17%)!important; 
+    transition: background-color 0.2s;
+}
+
+.form-control {
+    border-radius: 15px 0 0 15px;
+}
+
+.position-absolute {
+    width: 55rem; 
+    margin: -50px auto 0 auto; 
+    left: 50px; 
+    right: 50px;
+}
+    
+@media only screen and (max-width: 376px) {
+    .row {
+        width: 65% !important;
+        text-align: center;
+    } 
+
+    .par {
+        margin-bottom: 7px;
+        font-size: 0.5rem;
+        font-weight: 700;
+        color:  hsl(0, 0%, 59%);
+    }
+
+    .size {
+        padding: 1rem 2rem 0 2rem !important;
+    }
+
+    input {
+        width: 60vw !important;
+    }
+}
