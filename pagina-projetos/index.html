@@ -1,44 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-  <title>Project page</title>
-
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Reliable, efficient delivery Powered by Technology
-
-  Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful
-
-
-  Supervisor
-  Monitors activity to identify project roadblocks
-
-  Team Builder
-  Scans our talent network to create the optimal team for your project
-
-  Karma
-  Regularly evaluates our talent to ensure quality
-
-  Calculator
-  Uses data from past projects to provide better delivery estimates
-
-
-  <footer>
-    <p class="attribution">
-      Coded by <a href="#">Nome do Aluno</a>.
-    </p>
-  </footer>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+        <title>Página do Projeto</title>
+    </head>
+    <body>
+        <div class="container__t">
+            <h1 class="container__t_title">Reliable, efficient delivery</h1> 
+            <h1 class="container__t_title2">Powered by Technology</h1>
+            <p class="container__t_text">Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</p>
+        </div>
+        
+        <div class="container__cards">
+            <div style="order: 2;">
+                <div class="container__cards_card container__cards_card_1">
+                    <h1>Team Builder</h1> 
+                    <p>Scans our talent network to create the optimal team for your project</p> 
+                    <div class="container__cards_img">
+                        <img src="./images/icon-team-builder.svg" alt="Teambuilder Logo">
+                    </div>
+                </div>
+                <div class="container__cards_card container__cards_card_2">
+                    <h1>Karma</h1>
+                    <p>Regularly evaluates our talent to ensure quality</p>  
+                    <div class="container__cards_img">
+                        <img src="./images/icon-karma.svg" alt="Karma Logo">
+                    </div> 
+                </div>
+            </div>
+            <div class="container__cards_card container__cards_card_3">
+                <h1>Supervisor</h1>
+                <p>Monitors activity to identify project roadblocks</p>
+                <div class="container__cards_img">
+                    <img src="./images/icon-supervisor.svg" alt="Supervisor Logo">
+                </div>
+            </div>
+            <div class="container__cards_card container__cards_card_4">
+                <h1>Calculator</h1>
+                <p>Uses data from past projects to provide better delivery estimates</p>
+                <div class="container__cards_img">
+                    <img src="./images/icon-calculator.svg" alt="Calculator Logo">
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
