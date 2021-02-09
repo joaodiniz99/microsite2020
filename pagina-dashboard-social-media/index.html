@@ -1,81 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
- 
-  <title>Social Media Dashboard</title>
-
-
-</head>
-
-<body>
-  Social Media Dashboard
-  Total Followers: 23,004
-
-  @nathanf
-  1987
-  Followers
-  12 Today
-  @nathanf
-  1044
-  Followers
-  99 Today
-  @realnathan
-              
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  subscribers
-  144 Today
-            
-  Overview - Today
-
-  Page Views
-  87
-  3%
-    
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-                
-  Total Views
-  1407
-  12%
-
-  <footer>
-    <p class="attribution">
-      Coded by <a href="#">Nome do Aluno</a>.
-    </p>
-  </footer>
-
-</body>
-
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Social Media Dashboard</title>
+  </head>
+  <body>
+    <header class="container my-5">
+      <div class="d-flex flex-wrap justify-content-between align-items-center">
+        <div>
+          <h1 class="title">Social Media Dashboard</h1>
+          <p class="text">Total Followers: 23,004</p>
+        </div>
+        <div class="d-flex align-items-center">
+          <p class="darkModeLabel">Dark Mode</p>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </header>
+    <section class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+          <div class="cartoes cartaoFb">
+            <div class="cartoes__social">
+              <img src="./images/icon-facebook.svg" width="22" height="22" alt="Facebook Logo">
+              <p class="text">@nathanf</p>
+            </div>
+            <p class="cartoes__followerNumber">1987</p>
+            <p class="cartoes__followers">Followers</p>
+            <div class="cartoes__update cartoes__update__green">
+              <img src="./images/icon-up.svg" alt="arrow up">
+              <span>12 Today</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+          <div class="cartoes cartaoTw">
+            <div class="cartoes__social">
+              <img src="./images/icon-twitter.svg" width="22" height="22" alt="Facebook Logo">
+              <p class="text">@nathanf</p>
+            </div>
+            <p class="cartoes__followerNumber">1044</p>
+            <p class="cartoes__followers">Followers</p>
+            <div class="cartoes__update cartoes__update__green">
+              <img src="./images/icon-up.svg" alt="arrow up">
+              <span>99 Today</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+          <div class="cartoes cartaoIn">
+            <div class="cartoes__social">
+              <img src="./images/icon-instagram.svg" width="22" height="22" alt="Facebook Logo">
+              <p class="text">@realnathan</p>
+            </div>
+            <p class="cartoes__followerNumber">11k</p>
+            <p class="cartoes__followers">Followers</p>
+            <div class="cartoes__update cartoes__update__green">
+              <img src="./images/icon-up.svg" alt="arrow up">
+              <span>1099 Today</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+          <div class="cartoes cartaoYt">
+            <div class="cartoes__social">
+              <img src="./images/icon-youtube.svg" width="22" height="22" alt="Facebook Logo">
+              <p class="text">Nathan F.</p>
+            </div>
+            <p class="cartoes__followerNumber">8239</p>
+            <p class="cartoes__followers">subscribers</p>
+            <div class="cartoes__update cartoes__update__red">
+              <img src="./images/icon-down.svg" alt="arrow down">
+              <span>144 Today</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container mt-5">
+      <div class="row">
+        <div class="col">
+          <h4 class="text">Overview - Today</h4>
+        </div>
+      </div>
+    </section>
+    <section class="container mt-1">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 my-3">
+          <div class="cartoes-mini">
+            <div>
+              <h6 class="text">Page Views</h6>
+              <img src="./images/icon-facebook.svg" width="22" height="22" alt="Facebook Logo">
+            </div>
+            <br>
+            <div>
+              <p class="cartoes-mini-number">87</p>
+              <div class="cartoes-mini-green">
+                <img src="./images/icon-up.svg" alt="arrow up">
+                <span>3%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 my-3">
+          <div class="cartoes-mini">
+            <div>
+              <h6 class="text">Likes</h6>
+              <img src="./images/icon-facebook.svg" width="22" height="22" alt="Facebook Logo">
+            </div>
+            <br>
+            <div>
+              <p class="cartoes-mini-number">52</p>
+              <div class="cartoes-mini-red">
+                <img src="./images/icon-down.svg" alt="arrow up">
+                <span>2%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 my-3">
+          <div class="cartoes-mini">
+            <div>
+              <h6 class="text">Likes</h6>
+              <img src="./images/icon-instagram.svg" width="22" height="22" alt="Facebook Logo">
+            </div>
+            <br>
+            <div>
+              <p class="cartoes-mini-number">5462</p>
+              <div class="cartoes-mini-green">
+                <img src="./images/icon-up.svg" alt="arrow up">
+                <span>2257%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 my-3">
+          <div class="cartoes-mini">
+            <div>
+              <h6 class="text">Profile Views</h6>
+              <img src="./images/icon-instagram.svg" width="22" height="22" alt="Facebook Logo">
+            </div>
+            <br>
+            <div>
+              <p class="cartoes-mini-number">52k</p>
+              <div class="cartoes-mini-green">
+                <img src="./images/icon-up.svg" alt="arrow up">
+                <span>1375%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 my-3">
+          <div class="cartoes-mini">
+            <div>
+              <h6 class="text">Retweets</h6>
+              <img src="./images/icon-twitter.svg" width="22" height="22" alt="Facebook Logo">
+            </div>
+            <br>
+            <div>
+              <p class="cartoes-mini-number">117</p>
+              <div class="cartoes-mini-green">
+                <img src="./images/icon-up.svg" alt="arrow up">
+                <span>303%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 my-3">
+          <div class="cartoes-mini">
+            <div>
+              <h6 class="text">Likes</h6>
+              <img src="./images/icon-twitter.svg" width="22" height="22" alt="Facebook Logo">
+            </div>
+            <br>
+            <div>
+              <p class="cartoes-mini-number">507</p>
+              <div class="cartoes-mini-green">
+                <img src="./images/icon-up.svg" alt="arrow up">
+                <span>553%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 my-3">
+          <div class="cartoes-mini">
+            <div>
+              <h6 class="text">Likes</h6>
+              <img src="./images/icon-youtube.svg" width="22" height="22" alt="Facebook Logo">
+            </div>
+            <br>
+            <div>
+              <p class="cartoes-mini-number">107</p>
+              <div class="cartoes-mini-red">
+                <img src="./images/icon-down.svg" alt="arrow up">
+                <span>19%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 my-3">
+          <div class="cartoes-mini">
+            <div>
+              <h6 class="text">Total Views</h6>
+              <img src="./images/icon-youtube.svg" width="22" height="22" alt="Facebook Logo">
+            </div>
+            <br>
+            <div>
+              <p class="cartoes-mini-number">1407</p>
+              <div class="cartoes-mini-red">
+                <img src="./images/icon-down.svg" alt="arrow up">
+                <span>12%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
 </html>
